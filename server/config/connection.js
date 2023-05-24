@@ -1,5 +1,13 @@
 const mongoose = require("mongoose");
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/flix_video_db");
+const connectToDatabase = (uri) => {
+  mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => {
+      console.log("MongoDB database connection established successfully");
+    })
+    .catch((error) => {
+      console.error("Failed to connect to MongoDB:", error);
+    });
+};
 
-module.exports = mongoose.connection;
+module.exports = connectToDatabase;

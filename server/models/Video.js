@@ -2,10 +2,10 @@ const { Schema, model } = require("mongoose");
 
 const videoSchema = new Schema({
 	title: {
-		type: String,
-		required: true,
-		unique: true,
-		trim: true,
+	 type: String,
+	 required: true,
+	 unique: true,
+	 trim: true,
 	},
 	video_url: {
 		type: String,
@@ -22,16 +22,14 @@ const videoSchema = new Schema({
 	description: {
 		type: String,
 		required: true,
-		unique: true,
 		trim: true,
 	},
 	category: {
 		type: String,
 		required: true,
-		unique: true,
 		trim: true,
 	},
-	lenght: {
+	length: {
 		type: Number,
 	},
 	views: {
@@ -41,3 +39,5 @@ const videoSchema = new Schema({
 		type: Number,
 	},
 });
+
+module.exports = model('video', videoSchema);

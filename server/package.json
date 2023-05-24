@@ -11,6 +11,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@apollo/server": "^4.7.1",
+    "apollo-server-express": "^3.12.0",
     "bcrypt": "^5.1.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
@@ -18,7 +20,13 @@
     "express-graphql": "^0.12.0",
     "express-session": "^1.17.3",
     "googleapis": "^118.0.0",
-    "mongoose": "^7.1.0"
+    "graphql": "^16.6.0",
+    "graphql-http": "^1.18.0",
+    "graphql-passport": "^0.6.5",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.1.0",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
